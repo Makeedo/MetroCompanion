@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+    div.input
+      span.label Start
+      input(type="text", name="start")
+    div.input
+      span.label Destination
+      input(type="text", name="destination")
+    div.actions
+      input(type="button", value="go", onclick="getShortestRoute()")
+  div#netzplan
+    svg#svgout
+  script(type="text/javascript" src="javascripts/netzplan.js")
